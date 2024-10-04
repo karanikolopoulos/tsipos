@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "tsipos"
+version = "0.1.0"
+description = ""
+authors = ["chriskara"]
+readme = "README.md"
+packages = [{include = "opap"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

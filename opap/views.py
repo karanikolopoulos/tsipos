@@ -1,0 +1,2 @@
+from opap import app
+
