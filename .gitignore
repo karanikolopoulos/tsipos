@@ -3,6 +3,7 @@
 *.code-workspace
 *.ipynb
 *.pyc
+*.db
 __pycache__/
 
 instance/
