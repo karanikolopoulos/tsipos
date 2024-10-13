@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <script>
+            alert('{{ message }}');
+            </script>
+        {% endfor %}
+      {% endif %}
+  {% endwith -%}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Κλήρωση </title>
+   </head>
+<body>
+  <div class="wrapper">
+    <h2>Δήλωση συμμετοχής</h2>
+    <form method="POST" action="#">
+      <div class="input-box">
+        <input name="first" type="text" placeholder="Όνομα" required>
+      </div>
+      <div class="input-box">
+        <input name="last" type="text" placeholder="Επίθετο" required>
+      </div>
+      <div class="input-box">
+        <input name="mail" type="text" placeholder="e-mail" required>
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Συμμετοχή">
+      </div>
+    </form>
+  </div>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</body>
+</html>
